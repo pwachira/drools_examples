@@ -71,8 +71,8 @@
           <arguments>
             <argument>-Xms1024M</argument>
             <argument>-Xmx1024M</argument>
-            <argument>-cp</argument>
-            <classpath/>
+           <!-- <argument>-cp</argument>
+              <classpath/>-->
             <argument>org.drools.benchmark.waltz.WaltzBenchmark</argument>
             <argument>waltz12.dat</argument>
           </arguments>

@@ -27,23 +27,24 @@ import java.awt.event.ActionEvent;
 public class DroolsBenchmarkExamplesApp extends JFrame {
 
     public static void main(String[] args) {
-        DroolsBenchmarkExamplesApp droolsBenchmarkExamplesApp = new DroolsBenchmarkExamplesApp();
+    	System.out.println  ( "1st arg is " + args[0]);
+        DroolsBenchmarkExamplesApp droolsBenchmarkExamplesApp = new DroolsBenchmarkExamplesApp(args);
         droolsBenchmarkExamplesApp.pack();
         droolsBenchmarkExamplesApp.setVisible(true);
     }
 
-    public DroolsBenchmarkExamplesApp() {
+    public DroolsBenchmarkExamplesApp(String[] args) {
         super("JBoss BRMS Benchmark examples");
-        setContentPane(createContentPane());
+        setContentPane(createContentPane(args));
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
     }
 
-    private Container createContentPane() {
+    private Container createContentPane( final String[] args) {
         JPanel contentPane = new JPanel(new GridLayout(0, 1));
         contentPane.add(new JLabel("Which benchmark do you want to see in the output?"));
         contentPane.add(new JButton(new AbstractAction("MannersBenchmark") {
             public void actionPerformed(ActionEvent e) {
-                MannersBenchmark.main(new String[0]);
+                MannersBenchmark.main(args);
             }
         }));
         contentPane.add(new JButton(new AbstractAction("WaltzBenchmark") {
