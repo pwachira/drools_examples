@@ -3,13 +3,13 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
 
   <modelVersion>4.0.0</modelVersion>
-  <!--  <parent>
+    <parent>
     <groupId>org.kie</groupId>
     <artifactId>kie-parent-with-dependencies</artifactId>
     <version>6.3.0-SNAPSHOT</version>
  
   </parent>
--->
+
   <groupId>org.drools</groupId>
   <!-- TODO rename to drools once parent pom has been moved -->
   <artifactId>drools-multiproject</artifactId>
